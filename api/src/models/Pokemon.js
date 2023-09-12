@@ -8,9 +8,8 @@ module.exports = (sequelize) => {
       type: DataTypes.UUID,
       primaryKey: true,
       defaultValue: DataTypes.UUIDV4
-      
     },
-    nombre: {
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -18,27 +17,27 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    vida: {
+    hp: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    ataque: {
+    attack: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    defensa: {
+    defense: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    velocidad: {
+    speed: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    altura: {
+    height: {
       type: DataTypes.FLOAT,
       allowNull: false,
     },
-    peso:{
+    weight:{
       type: DataTypes.FLOAT,
       allowNull: false,
     }

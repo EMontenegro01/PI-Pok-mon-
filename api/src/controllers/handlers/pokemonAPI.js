@@ -24,14 +24,14 @@ const allPokemonsAPI = async()=>{
             let pokemon = await axios.get(e.url);
             return{
                 id: pokemon.data.id,
-                nombre: pokemon.data.name,
+                name: pokemon.data.name,
                 image: pokemon.data.sprites.front_default,
-                vida: pokemon.data.stats.find((stat) => stat.stat.name === 'hp').base_stat,
-                ataque: pokemon.data.stats.find((stat) => stat.stat.name === 'attack').base_stat,
-                defensa: pokemon.data.stats.find((stat) => stat.stat.name === 'defense').base_stat,
-                velocidad: pokemon.data.stats.find((stat) => stat.stat.name === 'speed').base_stat,
-                altura: pokemon.data.height,
-                peso: pokemon.data.weight,
+                hp: pokemon.data.stats.find((stat) => stat.stat.name === 'hp').base_stat,
+                attack: pokemon.data.stats.find((stat) => stat.stat.name === 'attack').base_stat,
+                defense: pokemon.data.stats.find((stat) => stat.stat.name === 'defense').base_stat,
+                speed: pokemon.data.stats.find((stat) => stat.stat.name === 'speed').base_stat,
+                height: pokemon.data.height,
+                weight: pokemon.data.weight,
                 types: pokemon.data.types.map((type) => type.type.name), // Obtener tipos
             }
         }))

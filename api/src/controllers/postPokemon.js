@@ -3,18 +3,18 @@ const { Pokemon, Type } = require('../db');
 const postPokemon = async (req, res) => {
   try {
     // Obtiene los datos del cuerpo de la solicitud
-    const { nombre, image, vida, ataque, defensa, velocidad, altura, peso, types } = req.body;
-    /* console.log(nombre); */
+    const { name, image, hp, attack, defense, speed, height, weight, types } = req.body;
+    /* console.log(name); */
     // Crea el nuevo Pokémon en la base de datos
     const newPokemon = await Pokemon.create({
-      nombre,
+      name,
       image,
-      vida,
-      ataque,
-      defensa,
-      velocidad,
-      altura,
-      peso,
+      hp,
+      attack,
+      defense,
+      speed,
+      height,
+      weight,
     });
 
     const typesPromisesArr = types.map(async(type)=>{

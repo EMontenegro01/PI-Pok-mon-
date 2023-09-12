@@ -22,14 +22,14 @@ const getPokemonById = async (req, res) => {
     if (data.name) {
       const pokemon = {
         id: data.id,
-        nombre: data.name,
+        name: data.name,
         image: data.sprites.front_default,
-        vida: data.stats.find((stat) => stat.stat.name === 'hp').base_stat,
-        ataque: data.stats.find((stat) => stat.stat.name === 'attack').base_stat,
-        defensa: data.stats.find((stat) => stat.stat.name === 'defense').base_stat,
-        velocidad: data.stats.find((stat) => stat.stat.name === 'speed').base_stat,
-        altura: data.height,
-        peso: data.weight,
+        hp: data.stats.find((stat) => stat.stat.name === 'hp').base_stat,
+        attack: data.stats.find((stat) => stat.stat.name === 'attack').base_stat,
+        defense: data.stats.find((stat) => stat.stat.name === 'defense').base_stat,
+        speed: data.stats.find((stat) => stat.stat.name === 'speed').base_stat,
+        height: data.height,
+        weight: data.weight,
         types: data.types.map((type) => type.type.name), // Obtener tipos
       };
       return res.status(200).json(pokemon);

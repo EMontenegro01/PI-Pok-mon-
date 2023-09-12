@@ -7,14 +7,14 @@ const getAllPokemons = async(req, res)=>{
         //Datos como un arreglo de objetos
         const arrayPokemons = pokemons.map((poke) => ({
             id: poke.id,
-            nombre: poke.nombre,
+            name: poke.name,
             image: poke.image,
-            vida: poke.vida,
-            ataque: poke.ataque,
-            defensa: poke.defensa,
-            velocidad: poke.velocidad,
-            altura: poke.altura,
-            peso: poke.peso
+            hp: poke.hp,
+            attack: poke.attack,
+            defense: poke.defense,
+            speed: poke.speed,
+            height: poke.height,
+            weight: poke.weight
         }));
     
     return res.status(200).json(arrayPokemons);
