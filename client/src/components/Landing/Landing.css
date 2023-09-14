@@ -1,0 +1,56 @@
+@font-face {
+  font-family: 'PokemonFont'; /* El nombre que quieras darle a la fuente */
+  src: url('../../assets/PocketMonk-15ze.ttf') format('truetype'); /* Ruta a tu archivo de fuente */
+  font-weight: normal;
+  font-style: normal;
+}
+
+.landing-page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .content {
+    text-align: center;
+  }
+  
+  .titulo {
+    font-family: 'PokemonFont', sans-serif;
+    font-size: 5rem;
+    color: yellow;
+    text-shadow: 
+      -4px -4px 0 blue,
+      4px -4px 0 blue,
+      -4px 4px 0 blue,
+      4px 4px 0 blue;
+  }
+  
+  .subtitulo {
+    font-size: 70px;
+    margin-bottom: 20px;
+    font-family: 'PokemonFont',sans-serif;
+  }
+  
+  .button-home {
+    font-family: 'PokemonFont',sans-serif;
+    background-color: #fd0202;
+    border: 2px solid #000;
+    border-radius: 10px;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button-home:hover {
+    background-color: #ffdb4d;
+  }
+  
+ 

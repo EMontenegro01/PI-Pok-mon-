@@ -19,20 +19,6 @@ const allPokemonsDB = async () => {
   }
 }
 
-const dbByName = async (name) =>{
-    try{
-        const pokemons = await Pokemon.findAll({
-            where:{
-                name:{
-                    [Op.like]: `%${name}%`
-                }
-            }
-        })
-    
-        return pokemons
-    } catch (error){
-        throw new Error(error.message)
-    }
-}
 
-module.exports = { dbByName, allPokemonsDB };
+
+module.exports = {allPokemonsDB };
